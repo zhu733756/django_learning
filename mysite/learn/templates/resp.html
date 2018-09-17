@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{{ request.user }}</p>
+<p>
+{% if request.user.is_authenticated %}
+    {{ request.user.username }}，您好！
+{% else %}
+    请登陆，这里放登陆链接
+{% endif %}
+</p>
+<p>
+{{ request.path }}
+</p>
+<p>
+{{ request.GET.urlencode }}
+</p>
+<a href="{{ request.path }}?{{ request.GET.urlencode }}&delete=1">当前网址delete</a>
+{% endblock %}

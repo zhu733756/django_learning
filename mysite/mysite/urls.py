@@ -18,9 +18,6 @@ from django.urls import path,re_path
 from learn import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls,name="main_views"),
-    path('',views.index,name="index"),
-    path('home/',views.home,name="home"),
-    re_path('^add/(\d+)/(\d+)/$',views.odd_redirect),
-    re_path('^new_add/(\d+)/(\d+)/$',views.add,name="add")
+    path('admin/', admin.site.urls),
+    path('user/', views.get_resp,name="get_resp"),
 ]
