@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+欢迎光临首页
+{% endblock %}
+
+{% block content %}
+<div>一个链接：{% url 'add' 4 5 %},</div>
+{% url 'add' 4 6 as the_url %}
+<a href="{{ the_url }}">一个链接</a>
+
+<a href="new_add/5/6"></a>
+{% endblock %}
