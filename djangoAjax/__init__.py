@@ -7,7 +7,3 @@
 -------------------------------------------------
 __author__ = 'zhu733756'
 """
-from django import forms
-class AddForm(forms.Form):
-    a=forms.IntegerField()
-    b=forms.IntegerField()

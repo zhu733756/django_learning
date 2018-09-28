@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""djangoAjax URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from tools import views
+from mysite import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index),
+    path('', views.index,name="home"),
+    path('add/', views.add,name="add"),
+    path("ajax_list/",views.ajax_list,name="ajax_list"),
+    path("ajax_dict/",views.ajax_dict,name="ajax_dict"),
 ]
